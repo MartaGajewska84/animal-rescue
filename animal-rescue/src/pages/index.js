@@ -4,4 +4,12 @@ import Home from './HomePage';
 import Animals from './AnimalsPage';
 import SingleAnimal from './SingleAnimalPage';
 
-export { About, Error, Home, Animals, SingleAnimal };
+
+export {
+  About,
+  Error,
+  Home,
+  Animals,
+  SingleAnimal,
+  
+};

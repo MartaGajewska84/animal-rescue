@@ -1,5 +1,19 @@
+import React from 'react';
+
+
+import { FeaturedAnimals, Questions, Hero, Reviews } from '../components/index';
+
 const HomePage = () => {
-  return <h1>HomePage</h1>;
+  return (
+    <main>
+      <Hero />
+      <FeaturedAnimals />
+      <Questions />
+      <Reviews />
+    </main>
+  );
 };
+
+
 
 export default HomePage;
