@@ -30,8 +30,9 @@ const Questions = () => {
 
 const Wrapper = styled.section`
   min-height: 60vh;
+  margin-bottom: 4rem;
   h3 {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
   }
   @media (min-width: 992px) {
     max-width: 60%;

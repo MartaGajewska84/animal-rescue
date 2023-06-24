@@ -7,7 +7,7 @@ const Question = ({ id, question, answer, activeId, toggleQuestion }) => {
   return (
     <Wrapper className="border">
       <header>
-        <h4>{question}</h4>
+        <h5>{question}</h5>
         <button className="plus-minus-btn" onClick={() => toggleQuestion(id)}>
           <IconContext.Provider value={{ className: 'icon' }}>
             {isActive ? <FaMinusCircle /> : <FaPlusCircle />}
@@ -24,6 +24,10 @@ const Wrapper = styled.section`
   header {
     display: flex;
     justify-content: space-between;
+  }
+
+  h5 {
+    font-size: 1.2rem;
   }
 
   p {

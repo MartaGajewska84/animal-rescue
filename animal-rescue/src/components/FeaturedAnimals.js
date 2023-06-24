@@ -7,21 +7,29 @@ const FeaturedAnimals = () => {
   return (
     <Wrapper className="section-center">
       <div className="pets">
-        <img src={pet1} />
-        <img src={pet2} />
-        <img src={pet3} />
+        <img src={pet1} className='pet'/>
+        <img src={pet2} className='pet' />
+        <img src={pet3} className='pet' />
       </div>
       <div className="single-pet">
-        <img src={pet2} />
+        <img src={pet2} className='pet'/>
       </div>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.section`
-margin-bottom: 3rem;
+  margin-bottom: 4rem;
   .pets {
-    display: none
+    display: none;
+    overflow: hidden;
+  }
+  
+  .pet {
+    transition: transform 0.5s ease;
+  }
+  .pet:hover  {
+    transform: scale(1.1);
   }
   .single-pet {
     display: flex;
@@ -37,7 +45,7 @@ margin-bottom: 3rem;
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 1rem;
+      gap: 1.5rem;
     }
   }
 `;
