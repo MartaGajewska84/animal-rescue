@@ -61,34 +61,34 @@ export const randomReviewers = [
     name: 'Sue Moore',
     photo: face1,
     review:
-      'Donec lobortis tellus convallis, tristique arcu eu, consequat arcu.',
+      'Donec lobortis tellus convallis, tristique arcu eu, consequat arcu. Aenean rutrum leo a accumsan pharetra. Aenean lectus lorem, laoreet at odio sed, luctus pulvinar orci. Aenean blandit varius.',
   },
   {
     id: 2,
     name: 'Sam Kean',
     photo: face2,
     review:
-      'Aenean lectus lorem, laoreet at odio sed, luctus pulvinar orci. Aenean blandit varius quam et tristique.',
+      'Aenean lectus lorem, laoreet at odio sed, luctus pulvinar orci. Aenean blandit varius quam et tristique.Aenean rutrum leo a accumsan pharetra. Aenean lectus lorem, laoreet at odio sed.',
   },
   {
     id: 3,
     name: 'Thomas Atkinson',
     photo: face3,
     review:
-      'Praesent imperdiet, enim in cursus sollicitudin, dolor ligula porta lacus, eu varius turpis velit sed arcu.',
+      'Praesent imperdiet, enim in cursus sollicitudin, dolor ligula porta lacus, eu varius turpis velit sed arcu.Aenean rutrum leo a accumsan pharetra. Aenean lectus lorem, laoreet at odio sed, luctus pulvinar.',
   },
   {
     id: 4,
     name: 'Ally Dean',
     photo: face4,
     review:
-      'Integer sagittis mollis varius. Integer pharetra justo sit amet tellus suscipit ullamcorper.',
+      'Integer sagittis mollis varius. Integer pharetra justo sit amet tellus suscipit ullamcorper.Aenean rutrum leo a accumsan pharetra. Aenean lectus lorem, laoreet at odio sed, luctus pulvinar orci.',
   },
   {
     id: 5,
     name: 'Michelle Joung',
     photo: face5,
     review:
-      'Integer sagittis mollis varius. Integer pharetra justo sit amet tellus suscipit ullamcorper.',
+      'Integer sagittis mollis varius. Integer pharetra justo sit amet tellus suscipit ullamcorper.Aenean rutrum leo a accumsan pharetra. Aenean lectus lorem, laoreet at odio sed, luctus pulvinar orci.',
   },
 ];

@@ -11,7 +11,7 @@ const Questions = () => {
   };
   return (
     <Wrapper className="section-center">
-      <h3>questions and answers about adoption</h3>
+      <h3><span>/</span>questions and answers about adoption</h3>
       <section>
         {questions.map((question) => {
           return (
@@ -30,10 +30,11 @@ const Questions = () => {
 
 const Wrapper = styled.section`
   min-height: 60vh;
-  display: grid;
-  place-items: center;
   h3 {
     margin-bottom: 1.5rem;
+  }
+  @media (min-width: 992px) {
+    max-width: 60%;
   }
 `;
 

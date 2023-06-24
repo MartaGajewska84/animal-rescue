@@ -6,6 +6,7 @@ import FeaturedAnimals from './FeaturedAnimals';
 import Questions from './Questions';
 import Reviews from './Reviews';
 import Question from './Question';
+import Contacts from './Contacts';
 
 export {
   Navbar,
@@ -16,4 +17,5 @@ export {
   Questions,
   Reviews,
   Question,
+  Contacts
 };

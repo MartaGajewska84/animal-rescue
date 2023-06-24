@@ -3,9 +3,9 @@ import { IconContext } from 'react-icons';
 import styled from 'styled-components';
 
 const Question = ({ id, question, answer, activeId, toggleQuestion }) => {
-  const isActive = id === activeId
+  const isActive = id === activeId;
   return (
-    <Wrapper>
+    <Wrapper className="border">
       <header>
         <h4>{question}</h4>
         <button className="plus-minus-btn" onClick={() => toggleQuestion(id)}>
@@ -20,15 +20,14 @@ const Question = ({ id, question, answer, activeId, toggleQuestion }) => {
 };
 
 const Wrapper = styled.section`
-  padding: 1rem 1.5rem;
-  border: 2px solid var(--clr-grey-special);
-  margin-bottom: 1rem;
-  border-radius: var(--radius);
-  box-shadow: var(--light-shadow);
-
+  
   header {
     display: flex;
     justify-content: space-between;
+  }
+
+  p {
+    max-width: 100%;
   }
 
   .plus-minus-btn {
@@ -42,8 +41,14 @@ const Wrapper = styled.section`
     height: 2rem;
     margin-left: 1rem;
     &:hover {
-      color: var(--clr-primary-3)
+      color: var(--clr-primary-3);
     }
+  }
+
+  @media (min-width: 992px) {
+    max-width: 100%;
+  }
+  
   }
 `;
 

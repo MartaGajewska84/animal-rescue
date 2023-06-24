@@ -171,6 +171,18 @@ p {
   color: var(--clr-primary-1);
 }
 
+.border {
+  padding: 1rem 1.5rem;
+  border: 2px solid var(--clr-grey-special);
+  margin-bottom: 1rem;
+  border-radius: var(--radius);
+  box-shadow: var(--light-shadow);
+}
+
+.border:hover {
+  box-shadow: var(--dark-shadow);
+}
+
 .title .underline {
   width: 6rem;
   height: 0.25rem;

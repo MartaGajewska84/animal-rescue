@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-import { FeaturedAnimals, Questions, Hero, Reviews } from '../components/index';
+import { FeaturedAnimals, Questions, Hero, Reviews, Contacts } from '../components/index';
 
 const HomePage = () => {
   return (
@@ -10,6 +10,7 @@ const HomePage = () => {
       <FeaturedAnimals />
       <Questions />
       <Reviews />
+      <Contacts/>
     </main>
   );
 };
