@@ -92,3 +92,5 @@ export const randomReviewers = [
       'Integer sagittis mollis varius. Integer pharetra justo sit amet tellus suscipit ullamcorper.Aenean rutrum leo a accumsan pharetra. Aenean lectus lorem, laoreet at odio sed, luctus pulvinar orci.',
   },
 ];
+
+export const animals_url = '/.netlify/functions/animals'

@@ -7,12 +7,12 @@ const FeaturedAnimals = () => {
   return (
     <Wrapper className="section-center">
       <div className="pets">
-        <img src={pet1} className='pet'/>
-        <img src={pet2} className='pet' />
-        <img src={pet3} className='pet' />
+        <img src={pet1} className="pet" alt="photo of a cat" />
+        <img src={pet2} className="pet" alt="photo of a dog" />
+        <img src={pet3} className="pet" alt="photo of a dog" />
       </div>
       <div className="single-pet">
-        <img src={pet2} className='pet'/>
+        <img src={pet2} className="pet" alt="photo of a dog" />
       </div>
     </Wrapper>
   );
@@ -24,11 +24,11 @@ const Wrapper = styled.section`
     display: none;
     overflow: hidden;
   }
-  
+
   .pet {
     transition: transform 0.5s ease;
   }
-  .pet:hover  {
+  .pet:hover {
     transform: scale(1.1);
   }
   .single-pet {

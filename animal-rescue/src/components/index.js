@@ -7,6 +7,9 @@ import Questions from './Questions';
 import Reviews from './Reviews';
 import Question from './Question';
 import Contacts from './Contacts';
+import Sort from './Sort';
+import AnimalsList from './AnimalsList';
+import Filters from './Filters';
 
 export {
   Navbar,
@@ -17,5 +20,8 @@ export {
   Questions,
   Reviews,
   Question,
-  Contacts
+  Contacts,
+  Sort,
+  Filters,
+  AnimalsList,
 };
