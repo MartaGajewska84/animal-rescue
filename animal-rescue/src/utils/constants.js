@@ -94,3 +94,4 @@ export const randomReviewers = [
 ];
 
 export const animals_url = '/.netlify/functions/animals'
+export const single_animal_url = '/.netlify/functions/single-animal?id='

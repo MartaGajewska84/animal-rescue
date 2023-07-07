@@ -38,12 +38,23 @@ export const AnimalsProvider = ({ children }) => {
     }
   };
 
+  const fetchSingleAnimal = async(url) => {
+    dispatch({ type: GET_SINGLE_ANIMAL_BEGIN });
+    try {
+      const response = await axios.get(url);
+      const singleAnimal = response.data;
+      dispatch({ type: GET_SINGLE_ANIMAL_SUCCESS, payload: singleAnimal});
+    } catch (error) {
+      dispatch({ type: GET_SINGLE_ANIMAL_ERROR });
+    }
+  }
+
   useEffect(() => {
     fetchAnimals(url);
   }, []);
 
   return (
-    <AnimalsContext.Provider value={{ ...state }}>
+    <AnimalsContext.Provider value={{ ...state, fetchSingleAnimal }}>
       {children}
     </AnimalsContext.Provider>
   );

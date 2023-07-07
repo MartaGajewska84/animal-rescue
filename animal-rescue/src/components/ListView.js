@@ -15,6 +15,9 @@ const ListView = () => {
             <div>
               <h4>{name}</h4>
               <p>{health}</p>
+              <Link to={`/animals/${id}`} className="btn">
+                Details
+              </Link>
             </div>
           </article>
         );
