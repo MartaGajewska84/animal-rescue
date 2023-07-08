@@ -10,6 +10,9 @@ import Contacts from './Contacts';
 import Sort from './Sort';
 import AnimalsList from './AnimalsList';
 import Filters from './Filters';
+import Loading from './Loading';
+import Error from './Error';
+import Animal from './Animal'
 
 export {
   Navbar,
@@ -24,4 +27,7 @@ export {
   Sort,
   Filters,
   AnimalsList,
+  Loading, 
+  Error, 
+  Animal,
 };

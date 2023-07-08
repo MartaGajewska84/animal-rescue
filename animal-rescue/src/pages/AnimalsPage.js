@@ -22,7 +22,7 @@ const Wrapper = styled.section`
     margin: 4rem auto;
   }
   @media (min-width: 768px) {
-    .products {
+    .animals {
       grid-template-columns: 200px 1fr;
     }
   }

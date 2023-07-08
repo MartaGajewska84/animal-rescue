@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { useAnimalsContext } from '../context/animals_context';
 import { single_animal_url as url } from '../utils/constants';
+import {Loading, Error} from '../components'
+
 const SingleAnimalPage = () => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -24,7 +26,16 @@ const SingleAnimalPage = () => {
       }, 3000);
     }
   }, [error]);
+
+  if (error) {
+    return <Error />;
+  }
+  
+  if (loading) {
+    return <Loading />;
+  }
   const { image, name, type, age, gender, health } = animal;
+  
 
   return (
     <Wrapper>
@@ -34,7 +45,7 @@ const SingleAnimalPage = () => {
         </Link>
         <div className="animal-center">
           <div>
-            <img src={image[0].url} />
+            {/*<img src={image[0].url} alt={name} />*/}
           </div>
           <div>
             <h2>Name: {name}</h2>
@@ -58,7 +69,7 @@ const Wrapper = styled.section`
   }
 
   img {
-    width: 70%;
+    width: 80%;
     border-radius: 50%;
     margin-bottom: 1rem;
     align-self: center;

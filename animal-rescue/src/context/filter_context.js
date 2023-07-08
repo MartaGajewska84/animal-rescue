@@ -33,11 +33,29 @@ export const FilterProvider = ({ children }) => {
   useEffect(() => {
     dispatch({ type: LOAD_ANIMALS, payload: animals });
   }, [animals]);
+
+  useEffect(() => {
+    dispatch({ type: SORT_ANIMALS });
+  }, [animals, state.sort])
+
+  const setGridView = () => {
+    dispatch({ type: SET_GRIDVIEW });
+  }
+  const setListView = () => {
+    dispatch({ type: SET_LISTVIEW });
+  }
+  const updateSort = (e) => {
+    //const name = e.target.name;
+    const value = e.target.value
+    console.log(value)
+    dispatch({ type: UPDATE_SORT, payload: value});
+  }
   return (
-    <FilterContext.Provider value={{ ...state }}>
+    <FilterContext.Provider value={{ ...state, setGridView, setListView, updateSort }}>
       {children}
     </FilterContext.Provider>
   );
+
 };
 
 export const useFilterContext = () => {

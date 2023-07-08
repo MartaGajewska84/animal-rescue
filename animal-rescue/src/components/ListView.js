@@ -1,14 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { useAnimalsContext } from '../context/animals_context';
+//import { useAnimalsContext } from '../context/animals_context';
 
-const ListView = () => {
-  const { animals } = useAnimalsContext();
+const ListView = ({animals}) => {
+  //const { animals } = useAnimalsContext();
   return (
     <Wrapper>
       {animals.map((animal) => {
-        const { id, name, type, age, gender, health, image } = animal;
+        const { id, name, health, image } = animal;
         return (
           <article key={id}>
             <img src={image[0].url} alt={name} />
