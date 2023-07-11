@@ -18,8 +18,11 @@ const initialState = {
   grid_view: true,
   sort: 'name-a',
   filters: {
+    text: '',
     type: 'all',
     gender: 'all',
+    min_age: 0,
+    max_age: 0,
     age: 0,
   },
 };
@@ -35,27 +38,50 @@ export const FilterProvider = ({ children }) => {
   }, [animals]);
 
   useEffect(() => {
+    dispatch({ type: FILTER_ANIMALS });
     dispatch({ type: SORT_ANIMALS });
-  }, [animals, state.sort])
+  }, [state.sort, state.filters]);
 
   const setGridView = () => {
     dispatch({ type: SET_GRIDVIEW });
-  }
+  };
   const setListView = () => {
     dispatch({ type: SET_LISTVIEW });
-  }
+  };
   const updateSort = (e) => {
-    //const name = e.target.name;
-    const value = e.target.value
-    console.log(value)
-    dispatch({ type: UPDATE_SORT, payload: value});
-  }
+    const value = e.target.value;
+    console.log(value);
+    dispatch({ type: UPDATE_SORT, payload: value });
+  };
+  const updateFilters = (e) => {
+    let name = e.target.name;
+    let value = e.target.value;
+    if (name === 'type') {
+      value = e.target.textContent;
+    }
+    if (name === 'age') {
+      value = Number(value);
+    }
+    dispatch({ type: UPDATE_FILTERS, payload: { name, value } });
+  };
+
+  const clearFilters = () => {
+    dispatch({ type: CLEAR_FILTERS });
+  };
   return (
-    <FilterContext.Provider value={{ ...state, setGridView, setListView, updateSort }}>
+    <FilterContext.Provider
+      value={{
+        ...state,
+        setGridView,
+        setListView,
+        updateSort,
+        updateFilters,
+        clearFilters,
+      }}
+    >
       {children}
     </FilterContext.Provider>
   );
-
 };
 
 export const useFilterContext = () => {

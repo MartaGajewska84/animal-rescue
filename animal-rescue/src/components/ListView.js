@@ -1,10 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-//import { useAnimalsContext } from '../context/animals_context';
 
 const ListView = ({animals}) => {
-  //const { animals } = useAnimalsContext();
+  
   return (
     <Wrapper>
       {animals.map((animal) => {
@@ -32,12 +31,12 @@ article {
   margin-bottom: 1rem;
 }
   img {
-    width: 50%;
-    border-radius: 50%;
-    margin-bottom: 1rem;
-    align-self: center;
-    justify-self: center;
-  }
+  width: 50%;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  align-self: center;
+  justify-self: center;
+}
   h4 {
     text-align: center;
     margin-bottom: 1.5rem;

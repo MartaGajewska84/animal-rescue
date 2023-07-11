@@ -40,7 +40,7 @@ const Reviews = () => {
       <div className="border">
         <div>
           <div className="img-container">
-            <img src={photo} />
+            <img src={photo} alt="person's face"/>
           </div>
           <h5>{name}</h5>
           <p>{review}</p>

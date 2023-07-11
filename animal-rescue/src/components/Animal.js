@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 const Animal = ({ image, name, id }) => {
-  //console.log(image[0].url);
   return (
     <Wrapper>
       <div className="container">

@@ -1,11 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import { useAnimalsContext } from '../context/animals_context';
 import Animal from './Animal';
 
-
 const GridView = ({animals}) => {
-  //const { animals } = useAnimalsContext();
+  
+  
   return (
     <Wrapper>
       <div className="animals-container">

@@ -3,9 +3,17 @@ import styled from 'styled-components';
 import { useFilterContext } from '../context/filter_context';
 import ListView from './ListView';
 import GridView from './GridView'
+import { useAnimalsContext } from '../context/animals_context';
+import { Loading} from '../components';
 
 const AnimalsList = () => {
   const {filtered_animals:animals, grid_view} = useFilterContext();
+  const {
+    animals_loading: loading,
+  } = useAnimalsContext();
+  if (loading) {
+    return <Loading />;
+  }
   if(animals.length < 1) {
     return <h5 style={{textTransform:'none'}}>Sorry, no animals matched your search...</h5>
   }

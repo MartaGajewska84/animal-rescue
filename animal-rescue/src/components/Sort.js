@@ -4,7 +4,14 @@ import { useFilterContext } from '../context/filter_context';
 import { BsFillGridFill, BsList } from 'react-icons/bs';
 
 const Sort = () => {
-  const { filtered_animals: animals, grid_view, setListView, setGridView, sort, updateSort } = useFilterContext();
+  const {
+    filtered_animals: animals,
+    grid_view,
+    setListView,
+    setGridView,
+    sort,
+    updateSort,
+  } = useFilterContext();
   return (
     <Wrapper>
       <div className="btn-container">
@@ -27,7 +34,13 @@ const Sort = () => {
       <hr />
       <form>
         <label htmlFor="sort">sort by</label>
-        <select name="sort" id="sort" className="sort-input" value={sort} onChange={updateSort}>
+        <select
+          name="sort"
+          id="sort"
+          className="sort-input"
+          value={sort}
+          onChange={updateSort}
+        >
           <option value="name-a">name (a-z)</option>
           <option value="name-z">name (z-a)</option>
         </select>

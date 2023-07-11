@@ -171,6 +171,8 @@ p {
   color: var(--clr-primary-1);
 }
 
+
+
 .border {
   padding: 1rem 1.5rem;
   border: 2px solid var(--clr-grey-special);
